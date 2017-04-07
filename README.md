@@ -6,6 +6,6 @@ This map was created to help admitted students both find their way to the locati
 
 https://spu.edu/info/maps/asp/
 
-![Main screen of App](./images/preview-1.png)
-![Menu Example](./images/preview-2.png)
-![After selecting a building or event](./images/preview-3.png)
+![Main screen of App](https://github.com/mattghall/asp-map/blob/master/img/preview-1.png)
+![Menu Example](https://github.com/mattghall/asp-map/blob/master/img/preview-2.png)
+![After selecting a building or event](https://github.com/mattghall/asp-map/blob/master/img/preview-3.png)
