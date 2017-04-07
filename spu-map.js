@@ -10,6 +10,7 @@
 	var centerCampus = {lat: 47.649609, lng: -122.363206};
 	var maxPos = {lat: 47.652145, lng: -122.355898};
 	var minPos = {lat: 47.646868, lng: -122.367415};
+	var isMobile = true;
 
 	$(function() {
 		$( ".check" ).change(function() {
@@ -28,7 +29,21 @@
 
 		// Open menu
 		setTimeout(function(){
-	    toggleNav();
+			var w = $( window ).width();
+			if(w>700){
+				isMobile = false;
+				var nav = document.getElementById("mySidenav");
+				var man = document.getElementById("main");
+				var ser = document.getElementById("main");
+				nav.style.width = "250px";
+				man.style.width = "calc(100% - 250px)";
+				man.style.marginLeft = "250px";
+				$(".closebtn").hide();
+				$("#burger-button").hide();
+			}
+			else{
+				toggleNav();
+			}
 		}, 1000);
 
 	});
@@ -351,17 +366,19 @@
 	// Menu codes
 	/* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
 	function toggleNav() {
-			var nav = document.getElementById("mySidenav");
-			var man = document.getElementById("main");
-			if(nav.style.width != "250px"){
-				nav.style.width = "250px";
-				man.style.marginLeft = "250px";
-				map.setOptions({draggable: false, scrollwheel: false, disableDoubleClickZoom: true});
-			}
-			else{
-				nav.style.width = "0";
-				man.style.marginLeft = "0";
-				map.setOptions({draggable: true,  scrollwheel: true, disableDoubleClickZoom: false});
+		if(isMobile){
+				var nav = document.getElementById("mySidenav");
+				var man = document.getElementById("main");
+				if(nav.style.width != "250px"){
+					nav.style.width = "250px";
+					man.style.marginLeft = "250px";
+					map.setOptions({draggable: false, scrollwheel: false, disableDoubleClickZoom: true});
+				}
+				else{
+					nav.style.width = "0";
+					man.style.marginLeft = "0";
+					map.setOptions({draggable: true,  scrollwheel: true, disableDoubleClickZoom: false});
+				}
 			}
 	}
 
