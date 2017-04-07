@@ -1,0 +1,70 @@
+#map { height: 100%; z-index: 9; }
+
+/* Optional: Makes the sample page fill the window. */
+
+html, body { height: 100%; margin: 0; padding: 0; font-family: 'UniversLTW01-47LightCn', 'Helvetica Neue', Arial, sans-serif; font-size: 62.5%; -webkit-font-smoothing: antialiased; }
+
+#search { background-color: #666; position: absolute; margin: 0; z-index: 10; height:40px; width: 100%; }
+#heading { color: #fff; font-size: 2rem; margin-left: .5em; }
+
+img { height: 150px; }
+
+.burger { font-size: 2rem; color: white; padding-left: 15px; line-height: 2; }
+.burger:hover, .burger:focus { cursor:pointer; }
+
+/* The side navigation menu */
+.sidenav { height: 100%; /* 100% Full-height */ width: 0; /* 0 width - change this with JavaScript */ position: fixed; /* Stay in place */ z-index: 1; /* Stay on top */ top: 0; left: 0; background-color: #333; /* Black*/ overflow-x: hidden; /* Disable horizontal scroll */ padding-top: 40px; /* Place content 60px from the top */ transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */ font-size: 1.4rem; }
+
+/* The navigation menu links */
+.sidenav a { text-decoration: none; font-size: 1.7rem; transition: 0.3s; color: #ccc; }
+.sidenav a small { font-size: 1.3rem; font-family: 'Univers LT W01_65 Bold', 'Helvetica Neue', Arial, sans-serif; color: #fff; }
+.sidenav a .loc { font-size: 1.2rem; font-family: 'Univers LT W01_65', 'Helvetica Neue', Arial, sans-serif; }
+.sidenav a .title { color: #fddc8e; }
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover, .offcanvas a:focus{ color: #f1f1f1; }
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn { position: absolute; top: -8px; right: 15px; font-size: 4rem; color: #fff; }
+.sidenav .resetbtn { position: absolute; top: 3px; left: 15px; font-size: 2.4rem; color: #fff; display: none; font-family: sans-serif; font-weight: bold; }
+#fixed-close { position: fixed; height: 40px; width: 250px; background: #222; top: 0; left: 0; z-index: 2; }
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+#main { transition: margin-left .5s; width:100%; height:100%; }
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+
+}
+
+.option-box { display: block; padding: 10px 15px 15px; }
+.option-box:nth-child(even) { background: #3a3a3a; }
+
+.option-box input{ float:right; margin-right:15px; vertical-align: middle; }
+input[type="checkbox"]{ width: 15px; /*Desired width*/ height: 15px; /*Desired height*/ }
+
+select { background: white; font-size: inherit; margin-top: .5em; }
+
+.day-box { color: #fff; padding: 10px 15px; font-family: "Univers LT W01_55 Roman", 'Helvetica Neue', Arial, sans-serif; }
+.day-one { background: #f97c1e; }
+.day-two { background: #1d7463; }
+.student { background: #0b688a; }
+.parent  { background: #0d7a99; }
+.student,.parent{
+	/*/height: 150px;
+	text-align: center;
+	vertical-align: middle;
+	line-height: 150px;*/
+	font-size: 1.8rem;
+	word-wrap: break-word;
+	font-family: "Univers LT W01_55 Roman", 'Helvetica Neue', Arial, sans-serif; /* "UniversLTW01-47LightCn", 'Helvetica Neue', Arial, sans-serif; */
+	padding: 2em 1.5em 2.2em;
+	cursor: pointer;
+}
+#endDiv{
+	margin-top: 100px;
+}
+.schedule-row-wrapper:nth-child(even) { background: #F1EFF0; }
+.select-box { background: #222; }
+
+#scrollable { position: absolute; overflow-y: scroll; height: 100%; width: 250px; -webkit-overflow-scrolling: touch; z-index: inherit; }

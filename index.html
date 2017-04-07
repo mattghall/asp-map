@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+	<title>SPU Preview Map</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <script src="./buildings.js?v=2"></script>
+  <script src="./schedule.js?v=2"></script>
+	<script type="text/javascript" src="spu-map.js?v=2"></script>
+	<link rel="stylesheet" type="text/css" href="spu-map.css?v=2" media="all" />
+	<link type="text/css" rel="stylesheet" href="https://fast.fonts.net/cssapi/20f70fac-063b-413c-a3dd-688603b0a296.css">
+  </head>
+  <body>
+    <div id="mySidenav" class="sidenav">
+	    <div id="fixed-close">
+          <a href="javascript:void(0)" class="resetbtn" onclick="ResetSchedule()">&#8634;</a>
+  		    <a href="javascript:void(0)" class="closebtn" onclick="toggleNav()">&times;</a>
+	    </div>
+      <div id="scrollable">
+          <div id="findDiv" class="option-box select-box">
+            <a>Find an SPU location</a>
+            <select id="buildings">
+              <option value="all">Show All</option>
+            </select>
+          </div>
+          <div id="studentTitle" class="day-box student" onclick="LoadStudentSchedule()">
+            Students &raquo;
+          </div>
+          <div id="parentTitle" class="day-box parent" onclick="LoadParentSchedule()">
+            Parents &amp; Guests &raquo;
+          </div>
+          <div id="thursdayTitle" class="day-box day-one" style="display: none;">
+			      Thursday
+		      </div>
+          <div id="fridayTitle" class="day-box day-two" style="display: none;">
+			      Friday
+		      </div>
+          <div id="endDiv" class="day-box">
+            &nbsp;
+          </div>
+	      </div>
+      </div>
+    </div>
+    <div id="main">
+      <div id="search">
+        <span id="burger-button" class="burger" onclick="toggleNav()">☰</span>
+        <span id="heading">Admitted Student Preview Map</span>
+      </div>
+      <div id="map"></div>
+    </div>
+	<script async defer src="https://maps.googleapis.com/maps/api/js?key=[YOUR-KEY-HERE]&callback=initMap"></script>
+  <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-17913756-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+  </body>
+</html>
